@@ -63,8 +63,8 @@ interface ItemsStore {
 export const useItemsStore = create<ItemsStore>((set) => ({
   items: [],
   setItems: (items) => set({ items }),
-  addItem: (item) => set((state) => ({ 
-    items: [...state.items, item] 
+  addItem: (item) => set((state) => ({
+    items: [...state.items, item]
   })),
   updateItem: (id, updates) => set((state) => ({
     items: state.items.map((item) =>
@@ -111,16 +111,16 @@ export function useItems() {
     onMutate: async (newItem) => {
       // Cancel outgoing refetches
       await queryClient.cancelQueries({ queryKey: ['items'] });
-      
+
       // Create optimistic item
       const optimisticItem = {
         id: Date.now().toString(),
         ...newItem,
       };
-      
+
       // Add to store
       addItem(optimisticItem);
-      
+
       return { optimisticItem };
     },
     onError: (err, newItem, context) => {
@@ -146,13 +146,13 @@ export function useItems() {
     },
     onMutate: async ({ id, updates }) => {
       await queryClient.cancelQueries({ queryKey: ['items'] });
-      
+
       // Snapshot current state
       const previousItems = queryClient.getQueryData(['items']);
-      
+
       // Update store optimistically
       updateItem(id, updates);
-      
+
       return { previousItems };
     },
     onError: (err, { id }, context) => {
@@ -182,11 +182,11 @@ import { useItems } from '../hooks/useItems';
 
 export function ItemList() {
   const { items, createItem, updateItem } = useItems();
-  
+
   return (
     <div>
       <button
-        onClick={() => 
+        onClick={() =>
           createItem({
             title: 'New Item',
             completed: false,
@@ -195,14 +195,14 @@ export function ItemList() {
       >
         Add Item
       </button>
-      
+
       {items?.map((item) => (
         <div key={item.id}>
           <span>{item.title}</span>
           <input
             type="checkbox"
             checked={item.completed}
-            onChange={() => 
+            onChange={() =>
               updateItem({
                 id: item.id,
                 updates: { completed: !item.completed },
@@ -302,11 +302,11 @@ const batchUpdateMutation = useMutation({
   onMutate: async (updates) => {
     await queryClient.cancelQueries({ queryKey: ['items'] });
     const previousItems = queryClient.getQueryData(['items']);
-    
+
     updates.forEach(({ id, updates }) => {
       updateItem(id, updates);
     });
-    
+
     return { previousItems };
   },
   onError: (err, updates, context) => {
@@ -339,10 +339,10 @@ mutations.mutate([
 Update specific parts of the cache:
 
 ```typescript
-queryClient.setQueryData(['items'], (old: Item[]) => 
-  old.map(item => 
-    item.id === updatedItem.id 
-      ? { ...item, ...updatedItem } 
+queryClient.setQueryData(['items'], (old: Item[]) =>
+  old.map(item =>
+    item.id === updatedItem.id
+      ? { ...item, ...updatedItem }
       : item
   )
 );

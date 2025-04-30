@@ -11,11 +11,17 @@
 
 from importlib import resources
 
-with resources.files('awslabs.frontend_mcp_server.static').joinpath('OPTIMISTIC_UI.md').open('r') as f:
+with (
+    resources.files('awslabs.frontend_mcp_server.static')
+    .joinpath('OPTIMISTIC_UI.md')
+    .open('r') as f
+):
     OPTIMISTIC_UI = f.read()
 
 with (
-    resources.files('awslabs.frontend_mcp_server.static').joinpath('SETUP_INSTRUCTIONS.md').open('r') as f
+    resources.files('awslabs.frontend_mcp_server.static')
+    .joinpath('SETUP_INSTRUCTIONS.md')
+    .open('r') as f
 ):
     SETUP_INSTRUCTIONS = f.read()
 

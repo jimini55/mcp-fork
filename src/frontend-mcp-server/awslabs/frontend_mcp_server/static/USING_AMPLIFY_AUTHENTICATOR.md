@@ -17,7 +17,7 @@ I18n.putVocabulariesForLanguage("en", {
 	"Sign in": "Login", // Button label
 	"Sign in to your account": "Welcome back!",
 	Username: "Enter your username", // Username label
-	Password: "Enter your password", // Password label
+	Password: "Enter your example password", // pragma: allowlist secret. EXAMPLE - NOT A REAL PASSWORD
 	"Forgot your password?": "Reset password",
 	"Create Account": "Register", // Tab header
 })
@@ -48,18 +48,18 @@ const formFields = {
 			placeholder: "Enter your email:",
 		},
 		password: {
-			placeholder: "Enter your password:",
+			placeholder: "Enter your example password:", // EXAMPLE - NOT REAL
 		},
 	},
 	signUp: {
 		password: {
 			label: "Password",
-			placeholder: "Enter your password:",
+			placeholder: "Enter your example password:", // EXAMPLE - NOT REAL
 			order: 1,
 		},
 		confirm_password: {
 			label: "Confirm password",
-			placeholder: "Confirm your password:",
+			placeholder: "Confirm your example password:", // EXAMPLE - NOT REAL
 			order: 2,
 		},
 		email: {
@@ -79,7 +79,7 @@ const formFields = {
 	},
 	forceNewPassword: {
 		password: {
-			placeholder: "Enter your password:",
+			placeholder: "Enter your example password:", // EXAMPLE - NOT REAL
 		},
 	},
 	forgotPassword: {

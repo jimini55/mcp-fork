@@ -11,50 +11,56 @@
 """Tests for the frontend MCP Server."""
 
 import pytest
-from unittest.mock import MagicMock
 from awslabs.frontend_mcp_server.server import (
     base_user_interface_web_app,
     optimistic_ui,
-    using_amplify_authenticator
+    using_amplify_authenticator,
 )
 from awslabs.frontend_mcp_server.static import (
-    SETUP_INSTRUCTIONS,
     OPTIMISTIC_UI,
-    USING_AMPLIFY_AUTHENTICATOR
+    SETUP_INSTRUCTIONS,
+    USING_AMPLIFY_AUTHENTICATOR,
 )
+from unittest.mock import MagicMock
+
 
 @pytest.mark.asyncio
 async def test_base_user_interface_web_app():
+    """Test the base_user_interface_web_app tool returns correct setup instructions."""
     # Arrange
-    test_query = "How do I set up a React app?"
+    test_query = 'How do I set up a React app?'
     mock_ctx = MagicMock()
-    
+
     # Act
     result = await base_user_interface_web_app(test_query, mock_ctx)
-    
+
     # Assert
     assert result == SETUP_INSTRUCTIONS
 
+
 @pytest.mark.asyncio
 async def test_optimistic_ui():
+    """Test the optimistic_ui tool returns correct optimistic UI implementation guide."""
     # Arrange
-    test_query = "How do I implement optimistic UI?"
+    test_query = 'How do I implement optimistic UI?'
     mock_ctx = MagicMock()
-    
+
     # Act
     result = await optimistic_ui(test_query, mock_ctx)
-    
+
     # Assert
     assert result == OPTIMISTIC_UI
 
+
 @pytest.mark.asyncio
 async def test_using_amplify_authenticator():
+    """Test the using_amplify_authenticator tool returns correct authentication guide."""
     # Arrange
-    test_query = "How do I use the Amplify Authenticator?"
+    test_query = 'How do I use the Amplify Authenticator?'
     mock_ctx = MagicMock()
-    
+
     # Act
     result = await using_amplify_authenticator(test_query, mock_ctx)
-    
+
     # Assert
     assert result == USING_AMPLIFY_AUTHENTICATOR

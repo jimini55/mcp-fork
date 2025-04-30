@@ -12,23 +12,24 @@
 """awslabs frontend MCP Server implementation."""
 
 import argparse
-from loguru import logger
-from mcp.server.fastmcp import Context, FastMCP
-from typing import Literal
 from awslabs.frontend_mcp_server.static import (
     OPTIMISTIC_UI,
     SETUP_INSTRUCTIONS,
     USING_AMPLIFY_AUTHENTICATOR,
 )
+from loguru import logger
+from mcp.server.fastmcp import Context, FastMCP
+
 
 mcp = FastMCP(
-    "awslabs.frontend-mcp-server",
+    'awslabs.frontend-mcp-server',
     instructions='The Frontend MCP Server provides specialized tools for modern web application development. It offers guidance on React application setup, optimistic UI implementation, and authentication integration. Use these tools when you need expert advice on frontend development best practices.',
     dependencies=[
         'pydantic',
         'loguru',
     ],
 )
+
 
 @mcp.tool(name='BaseUserInterfaceWebApp')
 async def base_user_interface_web_app(
@@ -59,7 +60,9 @@ async def using_amplify_authenticator(
 
 def main():
     """Run the MCP server with CLI argument support."""
-    parser = argparse.ArgumentParser(description='An AWS Labs Model Context Protocol (MCP) server for frontend')
+    parser = argparse.ArgumentParser(
+        description='An AWS Labs Model Context Protocol (MCP) server for frontend'
+    )
     parser.add_argument('--sse', action='store_true', help='Use SSE transport')
     parser.add_argument('--port', type=int, default=8888, help='Port to run the server on')
 
