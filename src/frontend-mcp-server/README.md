@@ -6,23 +6,17 @@ A Model Context Protocol (MCP) server that provides specialized tools for modern
 
 ## Features
 
-### Modern React Application Setup
+### Modern React Application Documentation
 
-- Set up a new React frontend application with `BaseUserInterfaceWebApp`
-- Includes guidance for configuring React Router, essential dependencies, and Shadcn/UI
-- Best practices for project structure and component organization
+This MCP Server provides comprehensive documentation on modern React application development through its `GetReactDocsByTopic` tool, which offers guidance on:
 
-### Optimistic UI Implementation
-
-- Learn implementation patterns for optimistic UI with `OptimisticUI`
-- Leverage React Query and Zustand for efficient state management
-- Handle error cases and state rollbacks elegantly
-
-### Authentication Integration
-
-- Integrate authentication with `UsingAmplifyAuthenticator`
-- Customize login and signup flows with AWS Amplify
-- Manage authenticated state and protected routes
+- **Essential Knowledge**: Fundamental concepts for building React applications
+- **Basic UI Setup**: Setting up a React project with Tailwind CSS and shadcn/ui
+- **Authentication**: AWS Amplify authentication integration
+- **Routing**: Implementing routing with React Router
+- **Customizing**: Theming with AWS Amplify components
+- **Creating Components**: Building React components with AWS integrations
+- **Troubleshooting**: Common issues and solutions for React development
 
 ## Prerequisites
 
@@ -51,39 +45,24 @@ Here are some ways you can work with MCP across AWS, and we'll be adding support
 
 ## Usage
 
-The Frontend MCP Server provides three primary tools for modern web application development:
+The Frontend MCP Server provides the `GetReactDocsByTopic` tool for accessing specialized documentation on modern web application development with AWS technologies.
 
-### BaseUserInterfaceWebApp
+### GetReactDocsByTopic
 
-Learn about how to start up a new UI frontend web app with modern best practices.
+This tool retrieves comprehensive documentation on specific React and AWS integration topics. To use it, specify which topic you need information on:
 
-This tool provides guidance on:
+```python
+result = await get_react_docs_by_topic('authentication')
+```
 
-- Scaffolding a new React Router application
-- Installing essential dependencies (Zustand, Zod, AWS Amplify, React Query)
-- Setting up Shadcn/UI components
-- Configuring the project structure
+Available topics:
 
-### OptimisticUI
+1. **essential-knowledge**: Foundational concepts for building React applications with AWS services
+2. **troubleshooting**: Common issues and solutions for React development with AWS integrations
+3. **basic-ui**: Detailed instructions for setting up a React 19 project with Tailwind CSS and shadcn/ui
+4. **authentication**: Complete guide to implementing AWS Amplify authentication in React applications
+5. **routing**: Implementing secure routing with React Router and AWS Amplify
+6. **customizing**: Customizing the look and feel of Amplify components
+7. **creating-components**: Building React components that integrate with AWS services
 
-Learn how to implement optimistic UI patterns with React Query and Zustand.
-
-This tool covers:
-
-- Core concepts of optimistic UI
-- Step-by-step implementation with React Query and Zustand
-- Code examples for common patterns
-- Best practices for error handling and state management
-- Advanced topics like parallel mutations and prefetching
-
-### UsingAmplifyAuthenticator
-
-Learn how to use the Amplify Authenticator for authentication in React applications.
-
-This tool provides:
-
-- Complete examples for setting up Amplify Authenticator
-- Guidance on customizing the authentication UI
-- Patterns for handling authentication state
-- Integration with React Router for protected routes
-- Strategies for managing user attributes and sessions
+Each topic returns comprehensive markdown documentation with explanations, code examples, and implementation guidance.

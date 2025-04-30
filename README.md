@@ -191,11 +191,11 @@ A server for AWS Terraform best practices.
 
 [![PyPI version](https://img.shields.io/pypi/v/awslabs.frontend-mcp-server.svg)](https://pypi.org/project/awslabs.frontend-mcp-server/)
 
-A server that provides specialized tools for modern web application development.
+A server that provides specialized documentation for modern web application development with AWS.
 
-- Modern React Application Setup with best practices
-- Optimistic UI Implementation with React Query and Zustand
-- Authentication Integration with AWS Amplify Authenticator
+- Comprehensive documentation on React with AWS integrations
+- Topics include AWS Amplify authentication, React Router, and shadcn/ui
+- Best practices for building AWS-powered React applications
 
 [Learn more](src/frontend-mcp-server/README.md) | [Documentation](https://awslabs.github.io/mcp/servers/frontend-mcp-server/)
 

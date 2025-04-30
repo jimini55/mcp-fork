@@ -12,13 +12,11 @@
 """awslabs frontend MCP Server implementation."""
 
 import argparse
-from awslabs.frontend_mcp_server.static import (
-    OPTIMISTIC_UI,
-    SETUP_INSTRUCTIONS,
-    USING_AMPLIFY_AUTHENTICATOR,
-)
+from awslabs.frontend_mcp_server.utils.file_utils import load_markdown_file
 from loguru import logger
-from mcp.server.fastmcp import Context, FastMCP
+from mcp.server.fastmcp import FastMCP
+from pydantic import Field
+from typing import Literal
 
 
 mcp = FastMCP(
@@ -31,31 +29,55 @@ mcp = FastMCP(
 )
 
 
-@mcp.tool(name='BaseUserInterfaceWebApp')
-async def base_user_interface_web_app(
-    query: str,
-    ctx: Context,
+@mcp.tool(name='GetReactDocsByTopic')
+async def get_react_docs_by_topic(
+    topic: Literal[
+        'essential-knowledge',
+        'troubleshooting',
+        'basic-ui',
+        'authentication',
+        'routing',
+        'customizing',
+        'creating-components',
+    ] = Field(
+        ...,
+        description='The topic of React documentation to retrieve. Topics include: essential-knowledge, troubleshooting, basic-ui, authentication, routing, customizing, creating-components.',
+    ),
 ) -> str:
-    """Learn about how to start up a new UI frontend web app with modern best practices."""
-    return SETUP_INSTRUCTIONS
+    """Get specific AWS web application UI setup documentation by topic.
 
+    Parameters:
+        topic: The topic of React documentation to retrieve.
+          - "essential-knowledge": Essential knowledge for working with React applications.
+          - "troubleshooting": Common issues and solutions when generating code.
+          - "basic-ui": Setting up a React project with Tailwind and shadcn/ui.
+          - "authentication": AWS Amplify authentication setup and integration.
+          - "routing": React Router implementation with authentication.
+          - "customizing": Amplify theme customization for login screens.
+          - "creating-components": Creating components with shadcn/ui and AWS Amplify.
 
-@mcp.tool(name='OptimisticUI')
-async def optimistic_ui(
-    query: str,
-    ctx: Context,
-) -> str:
-    """Learn about how to implement optimistic UI with React Query and Zustand."""
-    return OPTIMISTIC_UI
-
-
-@mcp.tool(name='UsingAmplifyAuthenticator')
-async def using_amplify_authenticator(
-    query: str,
-    ctx: Context,
-) -> str:
-    """Learn about how to use the Amplify Authenticator."""
-    return USING_AMPLIFY_AUTHENTICATOR
+    Returns:
+        A markdown string containing the requested documentation
+    """
+    match topic:
+        case 'essential-knowledge':
+            return load_markdown_file('essential-knowledge.md')
+        case 'troubleshooting':
+            return load_markdown_file('troubleshooting.md')
+        case 'basic-ui':
+            return load_markdown_file('basic-ui-setup.md')
+        case 'authentication':
+            return load_markdown_file('authentication-setup.md')
+        case 'routing':
+            return load_markdown_file('routing-setup.md')
+        case 'customizing':
+            return load_markdown_file('amplify-theme-customization.md')
+        case 'creating-components':
+            return load_markdown_file('creating-components.md')
+        case _:
+            raise ValueError(
+                f'Invalid topic: {topic}. Must be one of: essential-knowledge, basic-ui, authentication, routing, customizing, creating-components'
+            )
 
 
 def main():
