@@ -4,7 +4,7 @@ Here's how to setup authentication for a web application with AWS Amplify Authen
 
 ## Instructions
 
-Install @aws-amplify/ui-react and aws-amplify 
+Install @aws-amplify/ui-react and aws-amplify
 
 Configure Amplify in main.tsx
 

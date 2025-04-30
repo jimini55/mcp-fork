@@ -192,7 +192,7 @@ mv source-folder/file destination-folder/file
 ### 4. UI Development
 - Add new pages following existing patterns
 - Reuse existing pages, layouts, components where possible
-- Install or use shadcn components vs. creating custom components where possible 
+- Install or use shadcn components vs. creating custom components where possible
 - Add required shadcn components: `npx shadcn add [component-name]`
 - Keep component organization flat and simple
 - Extend routing using react-router v7 as configured
@@ -247,4 +247,3 @@ mv source-folder/file destination-folder/file
 ## Final check
 
 Conduct a final check to make sure that all items in the CHECKLIST.md are completed with a high level of quality and there are no errors or missing functionality.
-

@@ -11,7 +11,7 @@ Here is how to create a modern web application with React 19 project with Tailwi
 - Always prefer using official shadcn components when building the UI vs. creating custom components from scratch
 - Always use Amplify v6 Gen 2 as that is the latest version
 - Use the Authenticator component and hooks from Amplify instead of writing custom authentication UI components and logic
-- Amplify MUST not be used for creating the backend or hosting the web application. Those will be handled by CDK and other parts of the solution. Amplify should only used to simplify how the React web app talks to the pre-existing AWS backend. 
+- Amplify MUST not be used for creating the backend or hosting the web application. Those will be handled by CDK and other parts of the solution. Amplify should only used to simplify how the React web app talks to the pre-existing AWS backend.
 - Ensure you follow the instructions in this guide exactly and in the order provided
 
 ## Create a New React Project
@@ -91,7 +91,7 @@ import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
- 
+
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -116,7 +116,7 @@ During the initialization process, for the color base, select "Neutral".
 
 Now you can install shadcn/ui components as needed. The following components are used for most types of applications and should be installed. Others can be installed as needed.
 
-If prompted, choose the --force flag to avoid dependency issues as these are new versions of the packages. 
+If prompted, choose the --force flag to avoid dependency issues as these are new versions of the packages.
 
 ```bash
 npx shadcn add select card dialog textarea badge label form table collapsible avatar dropdown-menu skeleton input tooltip sheet button separator breadcrumb sidebar
@@ -147,9 +147,9 @@ After setup, your project structure should look similar to this. This example is
 my-task-app/
 ├── public/                            # Static assets
 │   └── favicon.ico
-│   └── login-splash.png               # splash image for login screen 
-├── src/                               
-│   ├── components/                    
+│   └── login-splash.png               # splash image for login screen
+├── src/
+│   ├── components/
 │   │   └── ui/                        # shadcn/ui components
 │   │       ├── button.tsx
 |   |       └── ...
@@ -166,27 +166,27 @@ my-task-app/
 │   ├── layouts/                       # Layout components
 │   │   ├── UnauthenticatedLayout.tsx  # Layout for unauthenticated pages
 │   │   └── AuthenticatedLayout.tsx    # Layout for authenticated pages
-│   ├── pages/                         
+│   ├── pages/
 │   │   ├── Login.tsx                  # Login page using UnauthenticatedLayout.tsx
 │   │   ├── DashboardPage.tsx
 │   │   ├── ReportsPage.tsx
 │   │   └── SettingsPage.tsx
-│   ├── store/                         
+│   ├── store/
 │   │   └── index.ts                   # Main store combining feature slices
-│   ├── App.tsx                        
-│   ├── index.css                      
+│   ├── App.tsx
+│   ├── index.css
 │   ├── main.tsx                       # Entry point with Amplify configuration
 │   └── routes.tsx                     # route definition
-├── index.html         
+├── index.html
 ├── amplify_outputs.json               # Amplify configuration file
-├── package.json                       
-├── tailwind.config.ts             
-├── tsconfig.json                    
-└── vite.config.ts                 
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
 
 ```
 
-## create the src/components/app-sidebar.tsx 
+## create the src/components/app-sidebar.tsx
 
 ```tsx
 import type * as React from "react"
@@ -459,4 +459,3 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 }
 
 ```
-

@@ -1,6 +1,6 @@
 # Login Screen Customization with shadcn/ui
 
-This guide shows how to create a themed login screen using Amplify Authenticator and shadcn. The login screen should be a 50/50 split with the left side showing an image placeholder. and right side with the amplify authenticator v/h centered. 
+This guide shows how to create a themed login screen using Amplify Authenticator and shadcn. The login screen should be a 50/50 split with the left side showing an image placeholder. and right side with the amplify authenticator v/h centered.
 
 ## create a cutom Amplify theme (/src/lib/amplify-theme.ts) that matches the shadcn theme
 
@@ -221,7 +221,7 @@ export const amplifyTheme = createTheme({
 });
 
 // Export the ThemeProvider for convenience
-export { ThemeProvider }; 
+export { ThemeProvider };
 ```
 
 
