@@ -9,38 +9,33 @@ A suite of specialized MCP servers that help you get the most out of AWS, wherev
 
 ## Table of Contents
 
-- [AWS MCP Servers](#aws-mcp-servers)
-  - [Table of Contents](#table-of-contents)
-  - [What is the Model Context Protocol (MCP) and how does it work with AWS MCP Servers?](#what-is-the-model-context-protocol-mcp-and-how-does-it-work-with-aws-mcp-servers)
-    - [Why MCP Servers?](#why-mcp-servers)
-  - [Available Servers](#available-servers)
-    - [Core MCP Server](#core-mcp-server)
-    - [AWS Documentation MCP Server](#aws-documentation-mcp-server)
-    - [Amazon Bedrock Knowledge Bases Retrieval MCP Server](#amazon-bedrock-knowledge-bases-retrieval-mcp-server)
-    - [AWS CDK MCP Server](#aws-cdk-mcp-server)
-    - [Cost Analysis MCP Server](#cost-analysis-mcp-server)
-    - [Amazon Nova Canvas MCP Server](#amazon-nova-canvas-mcp-server)
-    - [AWS Diagram MCP Server](#aws-diagram-mcp-server)
-    - [AWS Lambda MCP Server](#aws-lambda-mcp-server)
-    - [AWS Terraform MCP Server](#aws-terraform-mcp-server)
-    - [Frontend MCP Server](#frontend-mcp-server)
-    - [Use Cases for the Servers](#use-cases-for-the-servers)
-  - [Installation and Setup](#installation-and-setup)
-    - [Running MCP servers in containers](#running-mcp-servers-in-containers)
-    - [Getting Started with Cline and Amazon Bedrock](#getting-started-with-cline-and-amazon-bedrock)
-      - [`cline_mcp_settings.json`](#cline_mcp_settingsjson)
-    - [Getting Started with Cursor](#getting-started-with-cursor)
-      - [`.cursor/mcp.json`](#cursormcpjson)
-    - [Getting Started with Windsurf](#getting-started-with-windsurf)
-      - [`~/.codeium/windsurf/mcp_config.json`](#codeiumwindsurfmcp_configjson)
-  - [Samples](#samples)
-  - [Documentation](#documentation)
-  - [Additional Resources](#additional-resources)
-  - [Security](#security)
-  - [Contributing](#contributing)
-  - [Developer guide](#developer-guide)
-  - [License](#license)
-  - [Disclaimer](#disclaimer)
+- [What is the Model Context Protocol (MCP) and how does it work with AWS MCP Servers?](#what-is-the-model-context-protocol-mcp-and-how-does-it-work-with-aws-mcp-servers)
+  - [Why MCP Servers?](#why-mcp-servers)
+- [Available Servers](#available-servers)
+  - [Core MCP Server](#core-mcp-server)
+  - [AWS Documentation MCP Server](#aws-documentation-mcp-server)
+  - [Amazon Bedrock Knowledge Bases Retrieval MCP Server](#amazon-bedrock-knowledge-bases-retrieval-mcp-server)
+  - [AWS CDK MCP Server](#aws-cdk-mcp-server)
+  - [Cost Analysis MCP Server](#cost-analysis-mcp-server)
+  - [Amazon Nova Canvas MCP Server](#amazon-nova-canvas-mcp-server)
+  - [AWS Diagram MCP Server](#aws-diagram-mcp-server)
+  - [AWS Lambda MCP Server](#aws-lambda-mcp-server)
+  - [AWS Terraform MCP Server](#aws-terraform-mcp-server)
+  - [Use Cases for the Servers](#use-cases-for-the-servers)
+- [Installation and Setup](#installation-and-setup)
+  - [Getting Started with Cline and Amazon Bedrock](#getting-started-with-cline-and-amazon-bedrock)
+  - [Getting Started with Cursor](#getting-started-with-cursor)
+  - [Getting Started with Windsurf](#getting-started-with-windsurf)
+  - Getting Started with Q Developer - Coming Soon
+- [Samples](#samples)
+- [Documentation](#documentation)
+- [Vibe coding](#vibe-coding)
+- [Additional Resources](#additional-resources)
+- [Security](#security)
+- [Contributing](#contributing)
+- [Developer guide](#developer-guide)
+- [License](#license)
+- [Disclaimer](#disclaimer)
 
 ## What is the Model Context Protocol (MCP) and how does it work with AWS MCP Servers?
 
@@ -201,7 +196,7 @@ A server that provides specialized documentation for modern web application deve
 
 ### Use Cases for the Servers
 
-For example, you can use the **AWS Documentation MCP Server** to help your AI assistant research and generate up-to-date code for any AWS service, like Amazon Bedrock Inline agents. Alternatively, you could use the **CDK MCP Server** or the **Terraform MCP Server** to have your AI assistant create infrastructure-as-code implementations that use the latest APIs and follow AWS best practices. With the **Cost Analysis MCP Server**, you could ask "What are my top 3 AWS services by cost last month?" or "How can I reduce my EC2 costs?" and receive detailed insights and actionable recommendations.
+For example, you can use the **AWS Documentation MCP Server** to help your AI assistant research and generate up-to-date code for any AWS service, like Amazon Bedrock Inline agents. Alternatively, you could use the **CDK MCP Server** or the **Terraform MCP Server** to have your AI assistant create infrastructure-as-code implementations that use the latest APIs and follow AWS best practices. With the **Cost Analysis MCP Server**, you could ask "What would be the estimated monthly cost for this CDK project before I deploy it?" or "Can you help me understand the potential AWS service expenses for this infrastructure design?" and receive detailed cost estimations and budget planning insights.
 
 ## Installation and Setup
 
@@ -587,6 +582,10 @@ Documentation includes:
 - Installation and configuration instructions
 - API references
 - Usage examples
+
+## Vibe coding
+
+You can use these MCP servers with your AI coding assistant to [vibe code](https://en.wikipedia.org/wiki/Vibe_coding). For tips and tricks on how to improve your vibe coding experience, please refer to our [guide](./VIBE_CODING_TIPS_TRICKS.md).
 
 ## Additional Resources
 
