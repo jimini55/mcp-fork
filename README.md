@@ -282,7 +282,7 @@ Example configuration for Amazon Q CLI MCP (`~/.aws/amazonq/mcp.json`):
        },
        "disabled": false,
        "autoApprove": []
-     },
+     }
   }
 }
 ```
