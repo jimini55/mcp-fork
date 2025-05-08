@@ -150,7 +150,7 @@ As you go through the implementation, keep updating the checklist to ensure that
 ### 2. Setup & Configuration
 ```bash
 # Clone repository to frontend folder
-git clone https://github.com/sanjusunny/reference-ui.git frontend
+git clone -b starterkits/frontend-react18-shadcn https://github.com/awslabs/mcp.git frontend
 cd frontend
 npm install
 ```
