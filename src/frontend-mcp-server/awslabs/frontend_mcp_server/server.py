@@ -34,11 +34,6 @@ async def get_react_docs_by_topic(
     topic: Literal[
         'essential-knowledge',
         'troubleshooting',
-        'basic-ui',
-        'authentication',
-        'routing',
-        'customizing',
-        'creating-components',
     ] = Field(
         ...,
         description='The topic of React documentation to retrieve. Topics include: essential-knowledge, troubleshooting, basic-ui, authentication, routing, customizing, creating-components.',
@@ -50,11 +45,6 @@ async def get_react_docs_by_topic(
         topic: The topic of React documentation to retrieve.
           - "essential-knowledge": Essential knowledge for working with React applications.
           - "troubleshooting": Common issues and solutions when generating code.
-          - "basic-ui": Setting up a React project with Tailwind and shadcn/ui.
-          - "authentication": AWS Amplify authentication setup and integration.
-          - "routing": React Router implementation with authentication.
-          - "customizing": Amplify theme customization for login screens.
-          - "creating-components": Creating components with shadcn/ui and AWS Amplify.
 
     Returns:
         A markdown string containing the requested documentation
@@ -64,16 +54,6 @@ async def get_react_docs_by_topic(
             return load_markdown_file('essential-knowledge.md')
         case 'troubleshooting':
             return load_markdown_file('troubleshooting.md')
-        case 'basic-ui':
-            return load_markdown_file('basic-ui-setup.md')
-        case 'authentication':
-            return load_markdown_file('authentication-setup.md')
-        case 'routing':
-            return load_markdown_file('routing-setup.md')
-        case 'customizing':
-            return load_markdown_file('amplify-theme-customization.md')
-        case 'creating-components':
-            return load_markdown_file('creating-components.md')
         case _:
             raise ValueError(
                 f'Invalid topic: {topic}. Must be one of: essential-knowledge, basic-ui, authentication, routing, customizing, creating-components'
