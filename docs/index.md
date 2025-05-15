@@ -127,12 +127,11 @@ The Terraform MCP Server provides the following capabilities:
 
 ### Frontend MCP Server
 
-The Frontend MCP Server provides specialized tools for modern web application development with React.
+The Frontend MCP Server provides specialized tools for prototyping web applications with React and AWS Amplify.
 
 **Features:**
 
-- Modern React Application Setup with best practices
-- Optimistic UI Implementation with React Query and Zustand
+- Create a web application using React, Tailwind, and shadcn
 - Authentication Integration with AWS Amplify Authenticator
 
 [Learn more about the Frontend MCP Server](servers/frontend-mcp-server.md)
