@@ -132,7 +132,9 @@ The Frontend MCP Server provides specialized tools for prototyping web applicati
 **Features:**
 
 - Create a web application using React, Tailwind, and shadcn
-- Authentication Integration with AWS Amplify Authenticator
+- Customize the application based on functional requirements, deconstructing high-level application goals into features, pages, and components
+- Automatic application naming, branding (customized theme) and thematic image generation (splash images, fav icon) using Nova Canvas MCP
+- Integrated authentication flows with AWS Amplify auth
 
 [Learn more about the Frontend MCP Server](servers/frontend-mcp-server.md)
 
