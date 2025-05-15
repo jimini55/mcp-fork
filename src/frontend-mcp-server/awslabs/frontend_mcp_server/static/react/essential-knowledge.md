@@ -1,7 +1,7 @@
-# Reference UI Application Development Guide
+# Web application development instructions
 
 ## Introduction
-This document provides guidance for an LLM assistant helping users create custom web applications based on the reference UI template at https://github.com/sanjusunny/reference-ui. The template uses React, Tailwind CSS, React Router v7, shadcn UI components, AWS Amplify, and Zustand for state management. As the assisting LLM, you should use this information to analyze user requirements, suggest appropriate approaches, and provide implementation steps for customizing the reference template to meet their specific needs. Follow the structured approach outlined below to deliver high-quality applications efficiently while maintaining consistency with the existing architecture and best practices.
+This document provides instructions to create a custom web applications based on a frontend starter template. The template uses React, Tailwind CSS, React Router v7, shadcn UI components, AWS Amplify, and Zustand for state management. You should use this information to analyze user requirements, suggest appropriate approaches, and provide implementation steps for customizing the reference template to meet their specific needs. Follow the structured approach outlined below to deliver high-quality applications efficiently while maintaining consistency with the existing architecture and best practices.
 
 ## Important
 - Authentication, basic routing, and private/public layouts are already implemented
@@ -132,8 +132,8 @@ Once you have completed your analysis, you MUST create a CHECKLIST.md in the roo
 ```
 
 **Section 2: Implementation Checklist**
-- [ ] Generate modern app name/description
-- [ ] Clone repo to "frontend" folder and install dependencies
+- [ ] Generate a modern app name/description and a project folder name [app-name] based on the app name 
+- [ ] Clone repo to [app-name] folder and install dependencies
 - [ ] Update the README.md based on your analysis of the codebase and frontend stack
 - [ ] Update package.json name and app name references
 - [ ] Update app name and description on the login page
@@ -149,9 +149,11 @@ As you go through the implementation, keep updating the checklist to ensure that
 
 ### 2. Setup & Configuration
 ```bash
-# Clone repository to frontend folder
-git clone -b starterkits/frontend-react18-shadcn https://github.com/awslabs/mcp.git
-cd mcp/frontend
+# Clone repository into [app-name] folder
+git clone -b starterkits https://github.com/awslabs/mcp.git [app-name]
+# navigate to the frontend folder
+cd [app-name]/frontend
+# install packages
 npm install
 ```
 
