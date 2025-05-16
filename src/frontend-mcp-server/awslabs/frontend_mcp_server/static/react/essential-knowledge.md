@@ -132,7 +132,7 @@ Once you have completed your analysis, you MUST create a CHECKLIST.md in the roo
 ```
 
 **Section 2: Implementation Checklist**
-- [ ] Generate a modern app name/description and a project folder name [app-name] based on the app name 
+- [ ] Generate a modern app name/description and a project folder name [app-name] based on the app name
 - [ ] Clone repo to [app-name] folder and install dependencies
 - [ ] Update the README.md based on your analysis of the codebase and frontend stack
 - [ ] Update package.json name and app name references
