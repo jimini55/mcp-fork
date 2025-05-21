@@ -45,7 +45,7 @@ Here are some ways you can work with MCP across AWS, and we'll be adding support
 
 ## Usage
 
-The Frontend MCP Server provides the `GetReactDocsByTopic` tool for accessing specialized documentation on modern web application development with AWS technologies.
+The Frontend MCP Server provides the `GetReactDocsByTopic` tool for accessing specialized documentation on modern web application development with AWS technologies. This server will instruct the caller to clone a base web application repo and use that as the starting point for customization.
 
 ### GetReactDocsByTopic
 
@@ -59,10 +59,5 @@ Available topics:
 
 1. **essential-knowledge**: Foundational concepts for building React applications with AWS services
 2. **troubleshooting**: Common issues and solutions for React development with AWS integrations
-3. **basic-ui**: Detailed instructions for setting up a React 19 project with Tailwind CSS and shadcn/ui
-4. **authentication**: Complete guide to implementing AWS Amplify authentication in React applications
-5. **routing**: Implementing secure routing with React Router and AWS Amplify
-6. **customizing**: Customizing the look and feel of Amplify components
-7. **creating-components**: Building React components that integrate with AWS services
 
 Each topic returns comprehensive markdown documentation with explanations, code examples, and implementation guidance.
