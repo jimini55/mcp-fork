@@ -54,6 +54,16 @@ The Nova Canvas MCP Server enables AI assistants to generate images using Amazon
 
 [Learn more about the Nova Canvas MCP Server](servers/nova-canvas-mcp-server.md)
 
+### Kendra Index MCP Server
+
+The Kendra Index MCP Server enables AI assistants to retrieve additional context from a specified AWS Kendra index.
+
+**Features:**
+
+- Query a specified Kendra index
+
+[Learn more about the Kendra Index MCP Server](servers/kendra-index-mcp-server/README.md)
+
 ### Amazon Bedrock Knowledge Base Retrieval MCP Server
 
 The Bedrock Knowledge Base Retrieval MCP Server enables AI assistants to retrieve information from Amazon Bedrock Knowledge Bases.
@@ -91,6 +101,18 @@ The AWS Lambda MCP Server enables AI assistants to select and run AWS Lambda fun
 - Use AWS credentials to invoke the Lambda functions
 
 [Learn more about the AWS Lambda MCP Server](servers/lambda-mcp-server.md)
+
+### Aurora DSQL MCP Server
+
+An AWS Labs Model Context Protocol (MCP) server for Aurora DSQL
+
+**Features:**
+
+- Execute read only queries
+- Fetch table schema
+- Write or modify data using SQL, in a transaction
+
+[Learn more about the aurora-dsql MCP Server](servers/aurora-dsql-mcp-server.md)
 
 ### AWS Diagram MCP Server
 
@@ -238,6 +260,22 @@ A server for interacting with AWS DynamoDB
 - Data Plane operations like put, get, update, query and scan.
 
 [Learn more about the AWS DynamoDB MCP Server](servers/dynamodb-mcp-server.md)
+
+
+### AWS DocumentDB MCP Server
+
+The DocumentDB MCP Server enables AI assistants to interact with Amazon DocumentDB databases, providing secure query capabilities and database operations.
+
+**Features:**
+
+- Connection management for DocumentDB clusters
+- Query documents with filtering and projection
+- Execute MongoDB aggregation pipelines
+- Optional read-only mode for enhanced security
+- Automatic connection cleanup and resource management
+
+[Learn more about the DocumentDB MCP Server](servers/documentdb-mcp-server.md)
+
 
 ## Installation and Setup
 
