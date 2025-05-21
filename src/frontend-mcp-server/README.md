@@ -52,7 +52,7 @@ The Frontend MCP Server provides the `GetReactDocsByTopic` tool for accessing sp
 This tool retrieves comprehensive documentation on specific React and AWS integration topics. To use it, specify which topic you need information on:
 
 ```python
-result = await get_react_docs_by_topic('authentication')
+result = await get_react_docs_by_topic('essential-knowledge')
 ```
 
 Available topics:
